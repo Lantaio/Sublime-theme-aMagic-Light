@@ -8,7 +8,7 @@
 		"font_size_title": 20,
 
 		"base_hue": "hsl(30, 20%, 50%)",
-		"base_tint": "hsl(30, 25%, 5%)",  // black
+		"base_tint": "color(var(base_hue) l(5%))",  // black
 
 		"ui_bg": "color(var(base_hue) l(90%))",
 		"text_fg": "color(var(base_hue) l(6.25%))",
@@ -181,7 +181,7 @@
 		"icon_hover_opacity": { "target": 0.9, "speed": 5, "interpolation": "smoothstep" },
 
 		"status_bar_bg": "color(var(base_hue) l(80%))",
-		"status_bar_label_color": "color(var(text_fg) l(10%))",
+		"status_bar_label_color": "color(var(text_fg) l(20%))",
 		"status_bar_icon_tint": "color(var(status_bar_label_color) a(0.8))",
 		"status_bar_label_shadow": "color(white a(0.18))",
 
@@ -951,7 +951,7 @@
 			"class": "tab_label",
 			"settings": {"file_tab_style": ["", "rounded", "square"]},
 			"fg": "var(file_tab_selected_label_color)",
-			"opacity": { "target": 1, "speed": 5, "interpolation": "smoothstep" }
+			"opacity": { "target": 0.7, "speed": 5, "interpolation": "smoothstep" }
 		},
 		{
 			"class": "tab_label",
@@ -968,8 +968,14 @@
 		{
 			"class": "tab_label",
 			"settings": {"file_tab_style": ["", "rounded", "square"]},
-			"parents": [{"class": "tab_control", "attributes": ["!selected", "hover"]}],
+			"parents": [{"class": "tab_control", "attributes": ["hover"]}],
 			"opacity": { "target": 0.8, "speed": 5, "interpolation": "smoothstep" }
+		},
+		{
+			"class": "tab_label",
+			"settings": {"file_tab_style": ["", "rounded", "square"]},
+			"parents": [{"class": "tab_control", "attributes": ["highlighted"]}],
+			"opacity": { "target": 1, "speed": 5, "interpolation": "smoothstep" }
 		},
 		// Ensure unselected tabs use the correct text color based on what
 		// background is being shown
