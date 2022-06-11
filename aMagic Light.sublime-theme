@@ -7,7 +7,7 @@
 		"font_size_lg": 14,
 		"font_size_title": 20,
 
-		"base_hue": "hsl(30, 20%, 50%)",
+		"base_hue": "hsl(30, 25%, 50%)",
 		"base_tint": "color(var(base_hue) l(5%))",  // black
 
 		"ui_bg": "color(var(base_hue) l(90%))",
